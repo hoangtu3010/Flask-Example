@@ -13,4 +13,4 @@ RUN flask db init
 RUN flask db migrate
 RUN flask db upgrade
 
-CMD waitress-serve --listen 0.0.0.0:5000 wsgi:application
+CMD waitress-serve --listen 0.0.0.0:$PORT wsgi:application
