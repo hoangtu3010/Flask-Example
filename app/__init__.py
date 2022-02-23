@@ -52,6 +52,13 @@ def create_app():
 
     @app.route('/category')
     def get_all_category():
+        c1 = Category(name="Mobile")
+        c2 = Category(name="Laptop")
+        
+        db.session.add(c1)
+        db.session.add(c2)
+       
+        db.session.commit()	# Save
         category = Category.query.all()
 
         return render_template('category/list-category.html', category=category)
