@@ -47,27 +47,6 @@ def create_app():
 
     @app.route('/')
     def index():
-        c1 = Category(name="Mobile")
-        c2 = Category(name="Laptop")
-        
-        db.session.add(c1)
-        db.session.add(c2)
-        
-        p1 = Product(name="Iphone 13 Pro Max", price=1500, category_id=1)
-        p2 = Product(name="Samsung s20 plus", price=1300, category_id=1)
-        p3 = Product(name="Oppo zeno z", price=800, category_id=1)
-        p4 = Product(name="MSI gl65 Leopard", price=1500, category_id=2)
-        p5 = Product(name="Mac Air 15 inch 2021", price=1000, category_id=2)
-        p6 = Product(name="Mac Pro 17 inch 2021", price=2500, category_id=2)
-        
-        db.session.add(p1)
-        db.session.add(p2)
-        db.session.add(p3)
-        db.session.add(p4)
-        db.session.add(p5)
-        db.session.add(p6)
-        
-        db.session.commit()	# Save
         user = None
         return render_template('index.html', user=user)
 
