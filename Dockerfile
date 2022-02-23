@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 
 ENV SECRET_KEY=123456
-ENV SQLALCHEMY_DATABASE_URI=sqlite:////snippet.db
+ENV SQLALCHEMY_DATABASE_URI=sqlite:////product.db
 ENV SQLALCHEMY_TRACK_MODIFICATIONS=False
 
 RUN pip install -r requirements.txt
